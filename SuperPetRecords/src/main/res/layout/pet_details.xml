@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    android:background="@color/tannish"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/light_bluish"
+            />
+
+        <LinearLayout
+            android:id="@+id/name"
+            android:background="@color/bluegrassish"
+            style="@style/ModelVitalsLayout"
+            >
+
+            <kbc.superpetrecords.views.widgets.ExtendedTextView
+                kbc:fontName="mohave.otf"
+                android:id="@+id/nameText"
+                android:text="Name:"
+                style="@style/ModelVitalsText"
+
+                />
+
+            <RelativeLayout
+                style="@style/EditTextHolder"
+                android:layout_width="match_parent"
+
+                >
+                <EditText
+                    android:id="@+id/nameEditText"
+                    style="@style/ModelVitalsEditText"
+                    android:layout_width="match_parent"
+                    />
+                <ImageView
+                    style="@style/DottedUnderline"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/breed"
+            android:background="@color/maroonish"
+            android:layout_below="@id/name"
+            style="@style/ModelVitalsLayout"
+            >
+
+            <kbc.superpetrecords.views.widgets.ExtendedTextView
+                kbc:fontName="mohave.otf"
+                android:id="@+id/breedText"
+                android:textColor="@color/tannish"
+                android:text="Breed:"
+                style="@style/ModelVitalsText"
+                />
+
+            <RelativeLayout
+                style="@style/EditTextHolder"
+                android:layout_width="match_parent"
+                >
+                <EditText
+                    android:id="@+id/breedEditText"
+                    style="@style/ModelVitalsEditText"
+                    android:layout_width="match_parent"
+
+                    />
+                <ImageView
+                    style="@style/DottedUnderline"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/birthdate"
+            android:layout_below="@id/breed"
+            style="@style/ModelVitalsLayout"
+            >
+
+            <kbc.superpetrecords.views.widgets.ExtendedTextView
+                kbc:fontName="mohave.otf"
+                android:id="@+id/birthdateText"
+                android:text="Birthdate:"
+                style="@style/ModelVitalsText"
+                />
+            <RelativeLayout
+                style="@style/EditTextHolder"
+                android:layout_width="match_parent"
+                >
+                <TextView
+                    android:id="@+id/birthdateEditText"
+                    style="@style/ModelVitalsEditText"
+                    android:layout_width="match_parent"
+
+                    />
+                <ImageView
+                    style="@style/DottedUnderline"
+                    android:layout_width="match_parent"
+                    />
+                <ImageButton
+                    android:id="@+id/birthdateButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/species"
+            android:layout_below="@id/birthdate"
+            style="@style/ModelVitalsLayout"
+            android:layout_marginLeft="0dp"
+            >
+
+            <kbc.superpetrecords.views.widgets.ExtendedTextView
+                kbc:fontName="mohave.otf"
+                android:id="@+id/speciesText"
+                android:background="@color/just_peachy"
+                android:layout_marginLeft="0dp"
+                android:paddingLeft="25dp"
+                android:layout_width="105dp"
+                android:text="Species:"
+                style="@style/ModelVitalsText"
+                />
+            <RelativeLayout
+                style="@style/EditTextHolder"
+                android:layout_width="match_parent"
+                >
+                <EditText
+                    android:id="@+id/speciesEditText"
+                    style="@style/ModelVitalsEditText"
+                    android:layout_width="match_parent"
+
+                    />
+                <ImageView
+                    style="@style/DottedUnderline"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".8"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/camera_badge"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:id="@+id/petImageButton"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </FrameLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/calendarBadge"
+                style="@style/OptionBadge"
+                android:src="@drawable/calendar_badge"
+                />
+            <ImageView
+                android:id="@+id/dietBadge"
+                style="@style/OptionBadge"
+                android:src="@drawable/diet_badge"
+                />
+            <ImageView
+                android:id="@+id/imageBadge"
+                style="@style/OptionBadge"
+                android:src="@drawable/pencil_badge"
+                />
+            <ImageView
+                android:id="@+id/imageBadge2"
+                style="@style/OptionBadge"
+                android:src="@drawable/pharmacy_badge"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

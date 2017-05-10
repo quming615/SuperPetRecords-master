@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/animal_pattern"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="50dp"
+    android:paddingLeft="25dp"
+    android:paddingRight="25dp"
+    android:paddingTop="10dp">
+    <RelativeLayout
+        android:id="@+id/monthAndYearViewPort"
+        style="@style/CalendarHeadWrapper"
+        >
+        <ImageButton
+            android:id="@+id/left_triangle_button"
+            style="@style/CalendarBackOne"
+            />
+        <ImageButton
+            android:id="@+id/right_triangle_button"
+            style="@style/CalendarForwardOne"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true">
+            <kbc.superpetrecords.views.widgets.ExtendedTextView
+                style="@style/CalendarMonth"
+                android:id="@+id/appointment_calendar_month_text"
+                />
+            <kbc.superpetrecords.views.widgets.ExtendedTextView
+                android:id="@+id/appointment_calendar_year_text"
+                style="@style/CalendarYear"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+    <GridView
+        android:id="@+id/dayOfWeekView"
+        style="@style/CalendarDayOfWeek"
+        tools:listitem="@layout/appointment_calendar_day_of_week"
+        >
+    </GridView>
+    <GridView
+        android:id="@+id/appointment_calendar_days_of_month"
+        tools:listitem="@layout/appointment_calendar_date"
+        style="@style/CalendarDays"
+        >
+    </GridView>
+
+</LinearLayout>

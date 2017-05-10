@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<item
+        android:title="Edit"
+        android:id="@+id/edit_action_menu_item"
+        android:icon="@drawable/pencil_badge"
+        android:showAsAction="ifRoom"
+        />-->
+    <item
+        android:title="Save"
+        android:id="@+id/save_action_menu_item"
+        android:icon="@drawable/save_badge"
+        android:showAsAction="ifRoom"
+        />
+    <item
+        android:title="New"
+        android:id="@+id/new_action_menu_item"
+        android:icon="@drawable/new_badge"
+        android:showAsAction="ifRoom"
+        />
+</menu>

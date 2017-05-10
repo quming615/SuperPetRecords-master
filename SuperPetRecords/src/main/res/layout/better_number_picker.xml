@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:kbc="http://schemas.android.com/apk/res-auto"
+      android:orientation="horizontal"
+      android:layout_margin="0dp"
+      android:padding="0dp"
+      android:layout_width="90dp"
+      android:layout_height="30dp">
+
+    <Button
+        android:id="@+id/plusOneButton"
+        android:layout_gravity="top"
+        android:layout_width="0dp"
+        android:layout_weight=".33"
+        android:layout_height="30dp"
+        android:padding="0dp"
+        android:background="@color/light_bluish"
+        android:layout_margin="0dp"
+        android:text="+"
+        />
+    <kbc.superpetrecords.views.widgets.ExtendedEditText
+        android:layout_toRightOf="@id/plusOneButton"
+        android:id="@+id/numberField"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_margin="0dp"
+        android:layout_width="0dp"
+        android:layout_weight=".33"
+        android:layout_height="30dp"
+        android:padding="0dp"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        android:text="0"
+        />
+
+    <Button
+        android:layout_toRightOf="@id/numberField"
+        android:id="@+id/minusOneButton"
+        android:layout_gravity="top"
+        android:layout_width="0dp"
+        android:layout_weight=".33"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:background="@color/light_bluish"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:text="-"
+        />
+
+</LinearLayout>

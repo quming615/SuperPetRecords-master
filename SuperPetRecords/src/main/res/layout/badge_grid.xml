@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:id="@+id/speciesGrid"
+    android:layout_width="300dp"
+    android:background="@color/goldish"
+    android:layout_height="50dp"
+    >
+    <ImageButton
+        android:id="@+id/dogBadgeImage"
+        style="@style/ModelBadge"
+        android:src="@drawable/dog_badge_selector"
+        android:background="@null"
+        />
+    <ImageButton
+        android:id="@+id/catBadgeImage"
+        style="@style/ModelBadge"
+        android:src="@drawable/cat_badge_selector"
+        android:background="@null"
+        />
+    <ImageButton
+        android:id="@+id/birdBadgeImage"
+        style="@style/ModelBadge"
+        android:src="@drawable/bird_badge_selector"
+        android:background="@null"
+        />
+    <ImageButton
+        android:id="@+id/fishBadgeImage"
+        style="@style/ModelBadge"
+        android:src="@drawable/fish_badge_selector"
+        android:background="@null"
+        />
+    <ImageButton
+        android:id="@+id/mysteryBadgeImage"
+        style="@style/ModelBadge"
+        android:src="@drawable/mystery_badge_selector"
+        android:background="@null"
+        />
+    <ImageButton
+        android:id="@+id/ratBadgeImage"
+        style="@style/ModelBadge"
+        android:src="@drawable/rat_badge_selector"
+        android:background="@null"
+        />
+</GridLayout>

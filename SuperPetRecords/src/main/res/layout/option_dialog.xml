@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    style="@style/DialogWrapper"
+    android:background="@drawable/option_dialog_background" >
+    <LinearLayout
+        style="@style/DialogHead"
+        >
+        <ImageView
+            style="@style/DialogIcon"
+            android:src="@drawable/calendar_badge"
+            />
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            android:id="@+id/option_header_text"
+            style="@style/DialogMessage"
+            android:textColor="@color/tannish"
+            android:text="Message!"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/option_spinner"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/tannish"
+        android:layout_gravity="center_horizontal" />
+    <LinearLayout
+        style="@style/DialogButtons">
+        <kbc.superpetrecords.views.widgets.ExtendedButton
+            android:id="@+id/option_select"
+            style="@style/DialogButton2"
+            android:text="Select"/>
+        <kbc.superpetrecords.views.widgets.ExtendedButton
+            android:id="@+id/option_addnew"
+            style="@style/DialogButton2"
+            android:text="Add New"/>
+    </LinearLayout>
+</LinearLayout>

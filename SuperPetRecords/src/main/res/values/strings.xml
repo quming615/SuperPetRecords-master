@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">宠物通</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="chooser_title">Choose an app to perform requested action.</string>
+    <string name="date_time_done">OK</string>
+    <string name="interval_time_picker_dialog_title">Select a Time</string>
+
+    <string name="no_calendar_message">It seems like this is your first time using Super Pet Records. Please select a calendar to update or create a new one.</string>
+
+    <string-array name="weekdays_short">
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tues</item>
+        <item>Wed</item>
+        <item>Thurs</item>
+        <item>Fri</item>
+        <item>Sat</item>
+    </string-array>
+
+    <string-array name="daysOfMonth">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="rrule_frequency">
+        <item>一次</item>
+        <item>整天</item>
+        <item>每分钟</item>
+        <item>每小时</item>
+        <item>每天</item>
+        <item>每周</item>
+        <item>每月</item>
+        <item>每年</item>
+    </string-array>
+
+    <array name="appointmentCalendarDialogButtons">
+        <item>@array/appointmentCalendarDialogButton_0</item>
+        <item>@array/appointmentCalendarDialogButton_1</item>
+    </array>
+
+    <string-array name="appointmentCalendarDialogButton_0">
+        <item>New Appointment</item>
+    </string-array>
+
+    <string-array name="appointmentCalendarDialogButton_1">
+        <item>New Reminder</item>
+    </string-array>
+
+
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </string-array>
+</resources>

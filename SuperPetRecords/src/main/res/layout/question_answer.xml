@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="400dp"
+    android:layout_height="wrap_content">
+    <kbc.superpetrecords.views.widgets.ExtendedTextView
+        android:id="@+id/theQuestion"
+        android:layout_width="0dp"
+        android:layout_weight=".3"
+        android:padding="10dp"
+        android:text="Label"
+        kbc:fontName="mohave.otf"
+        android:textColor="@color/charcoal"
+        android:layout_height="match_parent"/>
+    <kbc.superpetrecords.views.widgets.ExtendedAutoCompleteTextView
+        android:id="@+id/theAnswer"
+        android:layout_width="0dp"
+        android:layout_weight=".7"
+        android:text="Content"
+        kbc:fontName="mohave.otf"
+        android:padding="10dp"
+        android:textColor="@color/white"
+        android:background="@color/charcoal"
+        android:layout_height="match_parent"/>
+</LinearLayout>

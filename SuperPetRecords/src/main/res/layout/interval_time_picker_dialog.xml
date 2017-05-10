@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    style="@style/DialogWrapper"
+    android:background="@drawable/white_border"
+    >
+    <LinearLayout
+        style="@style/DialogHead"
+        >
+        <ImageView
+            style="@style/DialogIcon"
+            android:src="@drawable/alarmclock_badge"
+            />
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            android:id="@+id/message"
+            android:text="Select a Time"
+
+            style="@style/DialogMessage"
+            />
+    </LinearLayout>
+    <kbc.superpetrecords.views.widgets.IntervalTimePicker
+        android:id="@+id/interval_time_picker"
+        kbc:minuteInterval="5"
+        kbc:digitColor="@color/boyz_room_light"
+        style="@style/DialogContent"
+        android:layout_gravity="center"
+        />
+    <LinearLayout
+        style="@style/DialogButtons">
+        <kbc.superpetrecords.views.widgets.ExtendedButton
+            android:id="@+id/ok"
+            style="@style/DialogButton"
+            android:text="OK"/>
+    </LinearLayout>
+
+</LinearLayout>

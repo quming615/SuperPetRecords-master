@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    style="@style/DialogWrapper"
+    android:background="@drawable/green_border"
+    >
+    <LinearLayout
+        style="@style/DialogHead">
+        <ImageView
+            style="@style/DialogIcon"
+            android:src="@drawable/calendar_badge"
+            />
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            style="@style/DialogMessage"
+            android:id="@+id/rrule_header_text"
+            android:text="Update Event Frequency"
+            />
+    </LinearLayout>
+    <GridLayout
+        android:id="@+id/rrule_checkbox_content"
+        style="@style/DialogGridContent"
+        >
+    </GridLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:id="@+id/rrule_content"
+            style="@style/DialogGridContent"
+            >
+        </GridLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp"
+            android:orientation="vertical">
+            <LinearLayout
+                style="@style/RRuleTextWrap">
+                <kbc.superpetrecords.views.widgets.ExtendedTextView
+                    android:text="Selected"
+                    style="@style/RRuleText"
+                    />
+                <kbc.superpetrecords.views.widgets.ExtendedButton
+                    android:id="@+id/rrule_destroyer"
+                    android:text="x"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_width="40dp"
+                    />
+                <Spinner
+                    android:layout_height="match_parent"
+                    android:layout_width="80dp"
+                    android:id="@+id/rrule_selector"
+                    android:background="@color/black"
+                    android:textColor="@color/white"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/RRuleTextWrap">
+                <kbc.superpetrecords.views.widgets.ExtendedTextView
+                    android:text="Count"
+                    style="@style/RRuleText"
+
+                    />
+                <kbc.superpetrecords.views.widgets.SidewaysPicker
+                    android:id="@+id/rrule_counter"
+                    style="@style/RRulePicker"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                style="@style/RRuleTextWrap">
+                <kbc.superpetrecords.views.widgets.ExtendedTextView
+                    android:text="Frequency"
+                    style="@style/RRuleText"
+                    />
+                <Spinner
+                    android:id="@+id/rrule_frequency"
+                    android:background="@color/charcoal"
+                    android:layout_height="wrap_content"
+                    android:layout_width="120dp"/>
+            </LinearLayout>
+            <LinearLayout
+                style="@style/RRuleTextWrap">
+                <kbc.superpetrecords.views.widgets.ExtendedTextView
+                    android:text="Interval"
+                    style="@style/RRuleText"
+                    />
+
+                <kbc.superpetrecords.views.widgets.SidewaysPicker
+                    android:id="@+id/rrule_repeater"
+                    style="@style/RRulePicker"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content">
+
+                <kbc.superpetrecords.views.widgets.ExtendedButton
+                    style="@style/RRuleButtons"
+                    android:text="Add Another."
+                    android:id="@+id/rrule_adder"
+                    />
+                <kbc.superpetrecords.views.widgets.ExtendedButton
+                    style="@style/RRuleButtons"
+                    android:text="That's All."
+                    android:id="@+id/rrule_closer"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

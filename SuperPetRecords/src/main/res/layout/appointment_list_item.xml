@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    android:background="@color/tannish"
+    android:layout_width="match_parent"
+    android:layout_height="75dp">
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:src="@drawable/dashed_line"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            android:id="@+id/Adescription"
+            style="@style/PetListText"
+            />
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            android:id="@+id/Acost"
+            style="@style/PetListText"
+            />
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            android:id="@+id/Adate"
+            style="@style/PetListText"
+            />
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            android:id="@+id/Apet"
+            style="@style/PetListText"
+            />
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            android:id="@+id/Avet"
+            style="@style/PetListText"
+            />
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            android:id="@+id/Alocation"
+            style="@style/PetListText"
+            />
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            android:id="@+id/Aprocedure"
+            style="@style/PetListText"
+            />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="About"
+          android:id="@+id/about_menu"
+          android:showAsAction="ifRoom"
+          android:icon="@drawable/sadcat"/>
+    <item android:title="Pets"
+        android:id="@+id/pets_menu"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/saddog">
+        <menu>
+            <item android:title="Add New Pet"
+                android:id="@+id/pets_menu_item_0"
+                android:onClick="addNewPet" />
+            <item android:title="Edit Pets"
+                android:id="@+id/pets_menu_item_1"
+                android:onClick="updatePets"/>
+        </menu>
+    </item>
+    <item android:title="Vets/Clinics"
+        android:id="@+id/vets_menu"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/procedure">
+        <menu>
+            <item android:title="Add New Vet/Clinic"
+                  android:onClick="addNewVet"
+                  android:id="@+id/vets_menu_item_0" />
+            <item android:title="Edit Vets/Clinics"
+                  android:onClick="updateVets"
+                  android:id="@+id/vets_menu_item_1" />
+        </menu>
+    </item>
+    <item android:title="Calendar"
+          android:id="@+id/calendar_menu"
+          android:showAsAction="ifRoom"
+          android:icon="@drawable/calendar_badge">
+        <menu>
+            <item android:title="View Calendar"
+                  android:onClick="getCalendar"
+                  android:id="@+id/calendar_menu_item_0" />
+            <item android:title="Set New Appointment"
+                  android:onClick="addNewAppointment"
+                  android:id="@+id/calendar_menu_item_1" />
+            <item android:title="Edit Appointments"
+                  android:onClick="updateAppointments"
+                  android:id="@+id/calendar_menu_item_2" />
+            <item android:title="Set New Reminder"
+                  android:onClick="addNewReminder"
+                  android:id="@+id/calendar_menu_item_3" />
+            <item android:title="Edit Reminders"
+                  android:onClick="updateReminders"
+                  android:id="@+id/calendar_menu_item_4" />
+        </menu>
+    </item>
+    <!--<item android:title="Options"
+          android:id="@+id/options_menu"
+          android:showAsAction="ifRoom"
+          android:icon="@drawable/haircut"
+    />-->
+</menu>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+    <LinearLayout
+        style="@style/NewEventLayout">
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            style="@style/NewEventTextView"
+            android:text="Appointment Type"/>
+        <EditText
+            android:id="@+id/appointment_name"
+            style="@style/NewEventEditText"/>
+    </LinearLayout>
+    <LinearLayout
+        style="@style/NewEventLayout">
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            style="@style/NewEventTextView"
+            android:text="Vet/Clinic"/>
+        <LinearLayout
+            style="NewEventSpinnerWrap">
+            <Spinner
+                android:id="@+id/appointment_vet"
+                style="NewEventSpinner"
+                >
+            </Spinner>
+            <Button
+                style="NewEventButton" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/NewEventLayout">
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            style="@style/NewEventTextView"
+            android:text="Start Time"/>
+        <EditText
+            android:id="@+id/appointment_dstart"
+            style="@style/NewEventEditText" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/NewEventLayout">
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            style="@style/NewEventTextView"
+            android:text="Repeats?"/>
+        <LinearLayout
+            style="NewEventSpinnerWrap">
+            <Spinner
+                android:id="@+id/appointment_recurrence"
+                style="NewEventSpinner"
+                >
+            </Spinner>
+            <Button
+                style="NewEventButton" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/NewEventLayout">
+        <kbc.superpetrecords.views.widgets.ExtendedTextView
+            style="@style/NewEventTextView"
+            android:text="Appointment Notes/Description"/>
+        <EditText
+            android:id="@+id/appointment_description"
+            style="@style/NewEventEditText"/>
+    </LinearLayout>
+
+</LinearLayout>
+
+

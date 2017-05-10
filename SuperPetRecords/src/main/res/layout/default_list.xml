@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <kbc.superpetrecords.views.widgets.ExtendedTextView
+        android:id="@+id/defaultListHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        kbc:fontName="langdon.otf"
+        android:gravity="center"
+        />
+    <ListView
+        android:id="@+id/defaultListView"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+</LinearLayout>

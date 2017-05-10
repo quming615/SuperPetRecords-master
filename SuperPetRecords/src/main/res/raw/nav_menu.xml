@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation_drawer_menu_items>
+    <array name="navigation_drawer_menu_items">
+        <item>@array/about_menu</item>
+        <item>@array/pets_menu</item>
+        <item>@array/vets_menu</item>
+        <item>@array/appointments_menu</item>
+        <item>@array/options_menu</item>
+    </array>
+    <string-array name="pets_menu">
+        <item name="">宠物</item>
+        <item>My Pets</item>
+        <item>Add New Pet</item>
+    </string-array>
+    <string-array name="about_menu">
+        <item>About</item>
+    </string-array>
+    <string-array name="vets_menu">
+        <item>Vets</item>
+        <item>My Vets/Clinics</item>
+        <item>Add New Vet/Clinic</item>
+    </string-array>
+    <string-array name="appointments_menu">
+        <item>Calendar</item>
+        <item>My Appointments</item>
+        <item>Add New Appointment</item>
+        <item>My Reminders</item>
+        <item>Add New Reminder</item>
+    </string-array>
+    <string-array name="options_menu">
+        <item>Options</item>
+    </string-array>
+</navigation_drawer_menu_items>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kbc.superpetrecords.views.widgets.ExtendedTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    style="@style/FullWidthEventField"
+    android:padding="10dp"
+    android:textColor="@color/white"
+    android:background="@color/charcoal"
+    >
+</kbc.superpetrecords.views.widgets.ExtendedTextView>

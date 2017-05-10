@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\exploded-aar\com.android.support\support-v4\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.1.1_65f30d5c370ef194e1ecd53f0e8bc8f4b7cd018d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0fb891e8f0cfba0513043a7bb357513d229ca2cd">
+        <dex dex="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.1.1_0820bb0be7f985da4b3f1d1960fedcbe9a0e230c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\exploded-aar\com.android.support\support-fragment\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e2719c102dca3a7a5b02ce07f769362da6ddb4ab">
+        <dex dex="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.1.1_e965bb1a742ca0f0a2c5d5f38b7f7a2e6cfa527d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7bde4c34162092e0a77e7f12dc85ed77c484cf5c">
+        <dex dex="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.1.1_cfdb6fb8d1160a7f88676aa4f974a3faba4db50d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.1.1_012c9632a5b4c77e991c6930da4af1435662bc52\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\androidStudio\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.1.1_8f15cf4f753a26a96e8d80d2c767a478f432d62d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="2b4fed583af8871036e525bfe319506209c31756">
+        <dex dex="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0ea1a3bd1721a9c68b73cdceab3be35d6a7199f7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\exploded-aar\com.android.support\support-compat\25.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.1.1_a96673f55eba5306e8ba25a6b2038977016eaf1b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b22010b43a0bc89ca3ae8fe8b3c7be71d646f649">
+        <dex dex="E:\PetHealth\SuperPetRecords-master\SuperPetRecords\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_dc8ce475e9812ab4a9a1c74fd3fe4156127924b1\classes.dex" />
+    </item>
+
+</items>

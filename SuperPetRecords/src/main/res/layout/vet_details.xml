@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    android:background="@color/tannish"
+    style="@style/ModelDetailsWrap">
+
+    <LinearLayout
+        style="@style/ModelDetailsHeader">
+
+        <kbc.superpetrecords.views.widgets.DetailView
+            kbc:labelText="Name:"
+            kbc:labelColor="@color/bluegrassish"
+            kbc:fontName="mohave.otf"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/name"
+            />
+
+        <kbc.superpetrecords.views.widgets.DetailView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            kbc:labelText="Phone:"
+            kbc:labelColor="@color/light_bluish"
+            kbc:fontName="mohave.otf"
+            android:id="@+id/phone"
+            />
+        <kbc.superpetrecords.views.widgets.DetailView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            kbc:labelText="Email:"
+            kbc:labelColor="@color/just_peachy"
+            kbc:fontName="mohave.otf"
+            android:id="@+id/email"
+            />
+        <kbc.superpetrecords.views.widgets.DetailView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            kbc:labelText="Address:"
+            kbc:labelColor="@color/reddish"
+            kbc:fontName="mohave.otf"
+            android:id="@+id/address"
+            />
+        <kbc.superpetrecords.views.widgets.DetailView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            kbc:labelText="Unit:"
+            kbc:labelColor="@color/yellowish"
+            kbc:fontName="mohave.otf"
+            android:id="@+id/unit"
+            />
+        <kbc.superpetrecords.views.widgets.DetailView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            kbc:labelText="City:"
+            kbc:labelColor="@color/bluegrassish"
+            kbc:fontName="mohave.otf"
+            android:id="@+id/city"
+            />
+        <kbc.superpetrecords.views.widgets.DetailView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            kbc:labelText="State:"
+            kbc:labelColor="@color/prom_dress"
+            kbc:fontName="mohave.otf"
+            android:id="@+id/state"
+            />
+        <kbc.superpetrecords.views.widgets.DetailView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            kbc:labelText="Zip:"
+            kbc:labelColor="@color/bluegrassish"
+            kbc:fontName="mohave.otf"
+            android:id="@+id/zip"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/calendarBadge"
+                style="@style/OptionBadge"
+                android:src="@drawable/calendar_badge"
+                />
+            <ImageView
+                android:id="@+id/dietBadge"
+                style="@style/OptionBadge"
+                android:src="@drawable/diet_badge"
+                />
+            <ImageView
+                android:id="@+id/imageBadge"
+                style="@style/OptionBadge"
+                android:src="@drawable/pencil_badge"
+                />
+            <ImageView
+                android:id="@+id/imageBadge2"
+                style="@style/OptionBadge"
+                android:src="@drawable/pharmacy_badge"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

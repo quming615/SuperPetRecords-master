@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:kbc="http://schemas.android.com/apk/res-auto">
+    <declare-styleable name="ExtendedTextView">
+        <attr name="fontName" format="string" />
+    </declare-styleable>
+    <declare-styleable name="ExtendedButton" parent="@android:style/Widget.Button">
+    </declare-styleable>
+    <declare-styleable name="IntervalTimePicker" parent="@android:style/ViewGroup.FrameLayout.TimePicker">
+        <attr name="minuteInterval" format="integer"></attr>
+        <attr name="hourInterval" format="integer"></attr>
+        <attr name="currentHour" format="integer"></attr>
+        <attr name="currentMinute" format="integer"></attr>
+        <attr name="currentMeridiem" format="integer"></attr>
+        <attr name="is24HourView" format="boolean"></attr>
+        <attr name="internalLayout" format="reference"></attr>
+        <attr name="digitColor" format="color"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="DetailView" parent="@android:style/ViewGroup.LinearLayout">
+        <attr name="labelText" format="string" />
+        <attr name="labelColor" format="color" />
+        <attr name="fieldText" format="string" />
+    </declare-styleable>
+    <declare-styleable name="kbcTheme">
+        <attr name="extendedButtonStyle" format="reference"/>
+        <attr name="detailViewStyle" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="ExtendedAutoCompleteTextView">
+        <attr name="completionHint" format="string" />
+        <attr name="completionHintView" format="integer" />
+        <attr name="completionThreshold" format="integer" />
+        <attr name="dropDownSelector" format="integer" />
+        <attr name="inputType" format="integer" />
+        <attr name="dropDownWidth" format="integer" />
+        <attr name="dropDownAnchor" format="integer" />
+        <attr name="dropDownHeight" format="integer" />
+        <attr name="dropDownVerticalOffset" format="float" />
+        <attr name="dropDownHorizontalOffset" format="float" />
+    </declare-styleable>
+    <declare-styleable name="SuperPetRecordsThemeRef">
+        <attr name="extendedAutoCompleteTextViewStyle" format="reference"/>
+        <attr name="extendedTextViewStyle" format="reference"/>
+        <attr name="extendedEditTextStyle" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="BetterPicker">
+        <attr name="fieldTextColor" format="integer" />
+        <attr name="fieldColor" format="integer" />
+        <attr name="plusTextColor" format="integer" />
+        <attr name="plusColor" format="integer" />
+        <attr name="minusTextColor" format="integer" />
+        <attr name="minusColor" format="integer" />
+        <attr name="fontSize" format="float" />
+    </declare-styleable>
+    <declare-styleable name="SidewaysPicker">
+        <attr name="maxCount" format="integer" />
+        <attr name="minCount" format="integer" />
+    </declare-styleable>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    >
+
+    <kbc.superpetrecords.views.widgets.ExtendedTextView
+        kbc:fontName="mohave.otf"
+        android:id="@+id/label"
+        style="@style/ModelVitalsText"
+        />
+    <RelativeLayout
+        style="@style/EditTextHolder"
+        android:layout_width="match_parent"
+        >
+        <kbc.superpetrecords.views.widgets.ExtendedEditText
+            android:id="@+id/field"
+            style="@style/ModelVitalsEditText"
+            android:layout_width="match_parent"
+            />
+        <ImageView
+            style="@style/DottedUnderline"
+            android:layout_width="match_parent"
+            />
+    </RelativeLayout>
+</merge>

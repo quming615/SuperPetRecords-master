@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kbc.superpetrecords.views.widgets.ExtendedTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/res-auto"
+    style="@style/FullWidthEventField"
+    android:id="@+id/spinner_item"
+    android:padding="5dp"
+    android:background="@drawable/spinner_selector"
+    >
+</kbc.superpetrecords.views.widgets.ExtendedTextView>

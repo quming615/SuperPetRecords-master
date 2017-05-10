@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:kbc="http://schemas.android.com/apk/kbc.superpetrecords"
+    android:layout_width="200dp"
+    android:background="@color/goldish"
+    android:layout_height="75dp">
+    <ImageView
+        style="@style/CornerFlourish"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/corner_flourish"
+        />
+    <ImageView
+        style="@style/CornerFlourish"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/corner_flourish_bottom_left"
+        />
+    <ImageView
+        style="@style/CornerFlourish"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/corner_flourish_top_right"
+        />
+    <ImageView
+        style="@style/CornerFlourish"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/corner_flourish_bottom_right"
+        />
+
+    <kbc.superpetrecords.views.widgets.ExtendedTextView
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:kbc="http://schemas.android.com/apk/kbc.superpetrecords"
+      android:id="@+id/completionHintText"
+      kbc:fontName="mohave.otf"
+      android:textAlignment="center"
+      android:text="Default Hint"
+      android:padding="20dp"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    </kbc.superpetrecords.views.widgets.ExtendedTextView>
+</RelativeLayout>
