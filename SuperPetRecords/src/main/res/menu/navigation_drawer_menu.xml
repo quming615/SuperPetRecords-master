@@ -2,48 +2,48 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="About"
+    <item android:title="关于"
           android:id="@+id/about_menu"
           android:showAsAction="ifRoom"
           android:icon="@drawable/sadcat"/>
-    <item android:title="Pets"
+    <item android:title="宠物"
         android:id="@+id/pets_menu"
         android:showAsAction="ifRoom"
         android:icon="@drawable/saddog">
         <menu>
-            <item android:title="Add New Pet"
+            <item android:title="添加宠物"
                 android:id="@+id/pets_menu_item_0"
                 android:onClick="addNewPet" />
-            <item android:title="Edit Pets"
+            <item android:title="宠物列表"
                 android:id="@+id/pets_menu_item_1"
                 android:onClick="updatePets"/>
         </menu>
     </item>
-    <item android:title="Vets/Clinics"
+    <item android:title="宠物医生/医院"
         android:id="@+id/vets_menu"
         android:showAsAction="ifRoom"
         android:icon="@drawable/procedure">
         <menu>
-            <item android:title="Add New Vet/Clinic"
+            <item android:title="添加医生/医院"
                   android:onClick="addNewVet"
                   android:id="@+id/vets_menu_item_0" />
-            <item android:title="Edit Vets/Clinics"
+            <item android:title="医生/医院列表"
                   android:onClick="updateVets"
                   android:id="@+id/vets_menu_item_1" />
         </menu>
     </item>
-    <item android:title="Calendar"
+    <item android:title="日历相关"
           android:id="@+id/calendar_menu"
           android:showAsAction="ifRoom"
           android:icon="@drawable/calendar_badge">
         <menu>
-            <item android:title="View Calendar"
+            <item android:title="查看日历"
                   android:onClick="getCalendar"
                   android:id="@+id/calendar_menu_item_0" />
-            <item android:title="Set New Appointment"
+            <item android:title="添加新的备忘"
                   android:onClick="addNewAppointment"
                   android:id="@+id/calendar_menu_item_1" />
-            <item android:title="Edit Appointments"
+            <item android:title="备忘列表"
                   android:onClick="updateAppointments"
                   android:id="@+id/calendar_menu_item_2" />
             <item android:title="Set New Reminder"

@@ -59,6 +59,7 @@ public class VetDetailsFragment extends Details {
         state_id = args.getInt("state_id");
     }
 
+
     public View onCreateView(LayoutInflater inflater, ViewGroup view_g, Bundle state) {
         super.onCreateView(inflater, view_g, state);
         final View layout = inflater.inflate(layout_id, view_g, false);
@@ -70,11 +71,28 @@ public class VetDetailsFragment extends Details {
         cityView = (DetailView) layout.findViewById(city_id);
         zipView = (DetailView) layout.findViewById(zip_id);
         stateView = (DetailView) layout.findViewById(state_id);
+        writeToFields();
         return layout;
     }
 
     protected void writeToFields() {
-
+        Bundle b = getArguments();
+        if(b.containsKey("vet")){
+            vet = b.getParcelable("vet");
+            if(vet!=null&&vet.getName()!=null){
+                if(vet.getName()!=null) nameView.setFieldText(vet.getName());
+                if(vet.getLocation()!=null) {
+                    addressView.setFieldText(vet.getLocation().getAddress());
+                    addressView.setLabelText(vet.getLocation().getAddress());
+                    unitView.setFieldText(vet.getLocation().getUnit());
+                    cityView.setFieldText(vet.getLocation().getCity());
+                    zipView.setFieldText(vet.getLocation().getZip());
+                    stateView.setFieldText(vet.getLocation().getState());
+                }
+                if(vet.getPhoneNumber()!=null) phoneView.setFieldText(String.valueOf(vet.getPhoneNumber().getPhoneNumber()));
+                if(vet.getEmailAddress()!=null) emailView.setFieldText(vet.getEmailAddress().getEmail());
+            }
+        }
     }
     
     protected void save() {
