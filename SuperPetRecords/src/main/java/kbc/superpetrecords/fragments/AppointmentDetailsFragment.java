@@ -29,6 +29,7 @@ import java.util.GregorianCalendar;
 import kbc.superpetrecords.models.*;
 import kbc.superpetrecords.views.widgets.ExtendedButton;
 import kbc.superpetrecords.views.widgets.ExtendedEditText;
+
 import java.util.*;
 
 /**
@@ -74,17 +75,17 @@ public class AppointmentDetailsFragment extends Fragment {
 
 
     public final RRuleFrequency[] FREQUENCY_OPTIONS = {
-        new RRuleFrequency(AppointmentCalendar.ONCE, "Once"),
-        new RRuleFrequency(AppointmentCalendar.ALL_DAY, "All Day"),
-        new RRuleFrequency(AppointmentCalendar.BY_MINUTE, "By Minute"),
-        new RRuleFrequency(AppointmentCalendar.BY_HOUR, "By Hour"),
-        new RRuleFrequency(AppointmentCalendar.BY_DAY_OF_WEEK, "By Day of Week"),
-        new RRuleFrequency(AppointmentCalendar.BY_DAY_OF_MONTH, "By Day of Month"),
-        new RRuleFrequency(AppointmentCalendar.BY_DAY_OF_YEAR, "By Day of Year"),
-        new RRuleFrequency(AppointmentCalendar.BY_WEEK_OF_MONTH, "By Week of Month"),
-        new RRuleFrequency(AppointmentCalendar.BY_WEEK_OF_YEAR, "By Week of Year"),
-        new RRuleFrequency(AppointmentCalendar.BY_MONTH, "By Month"),
-        new RRuleFrequency(AppointmentCalendar.BY_YEAR, "By Year")
+            new RRuleFrequency(AppointmentCalendar.ONCE, "Once"),
+            new RRuleFrequency(AppointmentCalendar.ALL_DAY, "All Day"),
+            new RRuleFrequency(AppointmentCalendar.BY_MINUTE, "By Minute"),
+            new RRuleFrequency(AppointmentCalendar.BY_HOUR, "By Hour"),
+            new RRuleFrequency(AppointmentCalendar.BY_DAY_OF_WEEK, "By Day of Week"),
+            new RRuleFrequency(AppointmentCalendar.BY_DAY_OF_MONTH, "By Day of Month"),
+            new RRuleFrequency(AppointmentCalendar.BY_DAY_OF_YEAR, "By Day of Year"),
+            new RRuleFrequency(AppointmentCalendar.BY_WEEK_OF_MONTH, "By Week of Month"),
+            new RRuleFrequency(AppointmentCalendar.BY_WEEK_OF_YEAR, "By Week of Year"),
+            new RRuleFrequency(AppointmentCalendar.BY_MONTH, "By Month"),
+            new RRuleFrequency(AppointmentCalendar.BY_YEAR, "By Year")
     };
 
     public static AppointmentDetailsFragment newInstance() {
@@ -221,10 +222,11 @@ public class AppointmentDetailsFragment extends Fragment {
         startYear.setText(String.valueOf(calendar.get(Calendar.YEAR)));
 
         startDateField.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
-            DatePickerFragment frag = new DatePickerFragment();
-            frag.setTargetFragment(AppointmentDetailsFragment.this, SET_START_DATE_ACTION);
-            ((MainActivity) getActivity()).attachDialogFragment(frag, "start_time");
+            @Override
+            public void onClick(View v) {
+                DatePickerFragment frag = new DatePickerFragment();
+                frag.setTargetFragment(AppointmentDetailsFragment.this, SET_START_DATE_ACTION);
+                ((MainActivity) getActivity()).attachDialogFragment(frag, "start_time");
             }
         });
 
@@ -240,7 +242,8 @@ public class AppointmentDetailsFragment extends Fragment {
         endYear.setText(String.valueOf(calendar.get(Calendar.YEAR)));
 
         endDateField.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
                 DatePickerFragment frag = new DatePickerFragment();
                 frag.setTargetFragment(AppointmentDetailsFragment.this, SET_END_DATE_ACTION);
                 ((MainActivity) getActivity()).attachDialogFragment(frag, "start_time");
@@ -255,7 +258,8 @@ public class AppointmentDetailsFragment extends Fragment {
         startMeridiem = (TextView) ll.findViewById(R.id.eventStartMeridiem);
 
         startField.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
                 IntervalTimePickerFragment frag = new IntervalTimePickerFragment();
                 frag.setTargetFragment(AppointmentDetailsFragment.this, SET_START_TIME_ACTION);
                 ((MainActivity) getActivity()).attachDialogFragment(frag, "start_time");
@@ -269,7 +273,8 @@ public class AppointmentDetailsFragment extends Fragment {
         endMeridiem = (TextView) ll.findViewById(R.id.eventEndMeridiem);
 
         endField.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
                 IntervalTimePickerFragment frag = new IntervalTimePickerFragment();
                 frag.setTargetFragment(AppointmentDetailsFragment.this, SET_END_TIME_ACTION);
                 ((MainActivity) getActivity()).attachDialogFragment(frag, "end_time");
@@ -313,10 +318,10 @@ public class AppointmentDetailsFragment extends Fragment {
                     int frequency = Integer.parseInt(Long.toString(mSelected.getId()));
 
                     switch (frequency) {
-                        case(AppointmentCalendar.ALL_DAY):
+                        case (AppointmentCalendar.ALL_DAY):
 
                             break;
-                        case(AppointmentCalendar.ONCE):
+                        case (AppointmentCalendar.ONCE):
                             break;
                         default:
                             Log.d("Frequency:onItemSelectedListener", Integer.toString(frequency));
@@ -340,7 +345,8 @@ public class AppointmentDetailsFragment extends Fragment {
 
         ExtendedButton addNew = (ExtendedButton) ll.findViewById(R.id.addNewEvent);
         addNew.setOnClickListener(new View.OnClickListener() {
-            @Override public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
                 Intent data = new Intent();
                 Bundle b = new Bundle();
 
@@ -377,9 +383,66 @@ public class AppointmentDetailsFragment extends Fragment {
                     b.putInt("interval", interval);
                     b.putIntegerArrayList("rrules", rrules);
                     b.putInt("frequency", frequency);
-                   data.putExtras(b);
+                    data.putExtras(b);
 
-                    getTargetFragment().onActivityResult(getTargetRequestCode(), Activity.RESULT_OK, data);
+                    int x = getTargetRequestCode();
+                    if (x == 0) {
+                        x = ADD_NEW_EVENT;
+                    }
+                    int y = Activity.RESULT_OK;
+                    Fragment f = getTargetFragment();
+                    if (f == null) {
+                        f = getParentFragment();
+                        Bundle b1 = data.getExtras();
+                        int interval = b1.getInt("interval");
+                        int count = b1.getInt("count");
+                        ArrayList<Integer> rrules = b1.getIntegerArrayList("rrules");
+                        int rrulesKey = b1.getInt("frequency");
+
+                        int startYear = b1.getInt("startYear");
+                        int startMonth = b1.getInt("startMonth");
+                        int startDate = b1.getInt("startDate");
+                        int startHour = b1.getInt("startHour");
+                        int startMinute = b1.getInt("startMinute");
+
+                        int endYear = b1.getInt("endYear");
+                        int endMonth = b1.getInt("endMonth");
+                        int endDate = b1.getInt("endDate");
+                        int endHour = b1.getInt("endHour");
+                        int endMinute = b1.getInt("endMinute");
+
+                        String descriptionSS = b1.getString("description");
+                        String costs = b1.getString("cost");
+                        float cost = Float.parseFloat(b1.getString("cost"));
+
+                        Location location = b1.getParcelable("location");
+                        Procedure procedure = b1.getParcelable("procedure");
+                        Vet vet = b1.getParcelable("vet");
+                        Pet pet = b1.getParcelable("pet");
+
+
+                        String titleString = pet.toString() + ", " + procedure.toString() + ", " + vet.toString();
+                        String locationString = location.getAddress() + " " + location.getUnit() + ", " + location.getCity() + ", " + location.getState() + " " + location.getZip();
+                        String rrule = "once";
+
+                        PetContract helpers = ((MainActivity) getActivity()).getDatabaseHelper();
+
+
+                        GregorianCalendar begins = new GregorianCalendar(startYear, startMonth, startDate, startHour, startMinute);
+                        GregorianCalendar ends = new GregorianCalendar(endYear, endMonth, endDate, endHour, endMinute);
+
+                        try {
+                            EventDate eventDate = helpers.insertDurationEvent(startDate, startMonth, startYear, (int) begins.getTimeInMillis(), (int) ends.getTimeInMillis(), rrule);
+                            helpers.insertAppointment(vet, pet, eventDate, location, procedure, cost, descriptionSS);
+                        } catch (PetContract.DatabaseInsertException dataInsertException) {
+                            Log.d("DatabaseInsertException:", "insertEventException");
+                            Toast.makeText(getActivity(), "DatabaseInsertException:" + "时间选择错误！", Toast.LENGTH_SHORT).show();
+                        }
+                        Toast.makeText(getActivity(), "insertSuccess", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    getTargetFragment().onActivityResult(x, Activity.RESULT_OK, data);
                     ((MainActivity) getActivity()).swapFragments(getTargetFragment(), AppointmentDetailsFragment.this);
                 } else {
                     NotificationDialog n = NotificationDialog.newInstance("Please enter all required fields to continue");
@@ -413,18 +476,18 @@ public class AppointmentDetailsFragment extends Fragment {
             Bundle bundle = data.getExtras();
             PetContract helper = ((MainActivity) getActivity()).getDatabaseHelper();
             switch (requestCode) {
-                case(SET_END_TIME_ACTION):
+                case (SET_END_TIME_ACTION):
                     hourEnd = bundle.getInt("hourOfDay");
                     minuteEnd = bundle.getInt("minute");
                     meridiemEnd = (hourEnd % 12 == 0) ? "AM" : "PM";
                     endHour.setText(Integer.toString(hourEnd % 12));
 
                     String minuteEndString = "00" + Integer.toString(minuteEnd);
-                    endMinute.setText(minuteEndString.substring(minuteEndString.length()- 2));
+                    endMinute.setText(minuteEndString.substring(minuteEndString.length() - 2));
 
                     endMeridiem.setText((hourEnd % 12 == 0) ? "AM" : "PM");
                     break;
-                case(SET_START_TIME_ACTION):
+                case (SET_START_TIME_ACTION):
                     hourStart = bundle.getInt("hourOfDay");
                     minuteStart = bundle.getInt("minute");
                     meridiemStart = (hourStart % 12 == 0) ? "AM" : "PM";
@@ -435,7 +498,7 @@ public class AppointmentDetailsFragment extends Fragment {
 
                     startMeridiem.setText(meridiemStart);
                     break;
-                case(SET_START_DATE_ACTION):
+                case (SET_START_DATE_ACTION):
                     yearStart = bundle.getInt("year");
                     monthStart = bundle.getInt("month");
                     dayStart = bundle.getInt("dayOfMonth");
@@ -445,7 +508,7 @@ public class AppointmentDetailsFragment extends Fragment {
                     startYear.setText(Integer.toString(yearStart));
 
                     break;
-                case(SET_END_DATE_ACTION):
+                case (SET_END_DATE_ACTION):
                     yearEnd = bundle.getInt("year");
                     monthEnd = bundle.getInt("month");
                     dayEnd = bundle.getInt("dayOfMonth");
@@ -455,10 +518,11 @@ public class AppointmentDetailsFragment extends Fragment {
                     endYear.setText(Integer.toString(yearEnd));
                     break;
 
-                case(ADD_NEW_EVENT):
+                case (ADD_NEW_EVENT):
 
                     break;
-                case(SET_FREQUENCY):
+
+                case (SET_FREQUENCY):
                     Log.d("SET_FREQUENCY", bundle.toString());
                     frequency = bundle.getInt("key");
                     count = bundle.getInt("count");
@@ -479,7 +543,7 @@ public class AppointmentDetailsFragment extends Fragment {
                     adapter.notifyDataSetChanged();
 
                     break;
-                case(ADD_LOCATION):
+                case (ADD_LOCATION):
                     String address = bundle.getString("address");
                     String unit = bundle.getString("unit");
                     String city = bundle.getString("city");
@@ -492,7 +556,7 @@ public class AppointmentDetailsFragment extends Fragment {
                         Log.e("Database Insert Exception", ex.getMessage());
                     }
                     break;
-                case(ADD_PROCEDURE):
+                case (ADD_PROCEDURE):
                     String name = bundle.getString("name");
                     String description = bundle.getString("description");
                     try {
@@ -503,7 +567,7 @@ public class AppointmentDetailsFragment extends Fragment {
                     }
 
                     break;
-                case(ADD_VET):
+                case (ADD_VET):
                     try {
                         String vetName = bundle.getString("name");
                         String vetEmail = bundle.getString("email_address");
@@ -515,7 +579,7 @@ public class AppointmentDetailsFragment extends Fragment {
                         String vzip = bundle.getString("zip");
                         PhoneNumber phoneNumber = helper.insertPhoneNumber(ContactType.PRIMARY, vetPhone);
                         EmailAddress emailAddress = helper.insertEmailAddress(ContactType.PRIMARY, vetEmail);
-                        Location locations = helper.insertLocation(vaddress,vunit,vcity,vstate,vzip);
+                        Location locations = helper.insertLocation(vaddress, vunit, vcity, vstate, vzip);
                         Contact contact = helper.insertContact(vetName, phoneNumber, emailAddress, locations);
                         vet = helper.insertVet(vetName, contact);
                         addVet(vet);
@@ -527,7 +591,8 @@ public class AppointmentDetailsFragment extends Fragment {
         }
     }
 
-    @Override public void onCreate(Bundle savedInstanceState) {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
     }
