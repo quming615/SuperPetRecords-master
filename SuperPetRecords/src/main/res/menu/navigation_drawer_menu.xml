@@ -30,6 +30,9 @@
             <item android:title="医生/医院列表"
                   android:onClick="updateVets"
                   android:id="@+id/vets_menu_item_1" />
+            <item android:title="附近的宠物医院"
+                android:onClick="searchNearbyVet"
+                android:id="@+id/vets_menu_item_2" />
         </menu>
     </item>
     <item android:title="日历相关"

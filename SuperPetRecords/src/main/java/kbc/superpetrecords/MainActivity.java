@@ -2,7 +2,6 @@ package kbc.superpetrecords;
 
 import android.animation.Animator;
 import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
 import android.app.Activity;
 
 import android.app.*;
@@ -15,6 +14,9 @@ import android.util.*;
 import android.view.*;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.*;
+
+
+import com.baidu.mapapi.SDKInitializer;
 
 import kbc.superpetrecords.dialogfragments.SpinnerDialog;
 import kbc.superpetrecords.fragments.*;
@@ -52,6 +54,7 @@ public class MainActivity extends Activity implements SpinnerDialog.OptionListen
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SDKInitializer.initialize(getApplicationContext());
         Log.d("MainActivity", "OnCreate");
         gesture_threshold_dp = ViewConfiguration.get(this).getScaledTouchSlop();
         density = getResources().getDisplayMetrics().density;
@@ -138,6 +141,13 @@ public class MainActivity extends Activity implements SpinnerDialog.OptionListen
     public void updateVets(MenuItem item) {
         attachFragment(VetListFragment.newInstance(dbHelper.getVetss(), R.layout.model_list), "updateVets");
     }
+
+    public void searchNearbyVet(MenuItem item){
+        attachFragmentToContainer (VetNearbyFragment.newInstance(),MainActivity.MAIN_CONTAINER,"查找附近宠物医院");
+        //attachFragmentToContainer(SearchVetFragment.newInstance(getApplicationContext()),MainActivity.MAIN_CONTAINER,"xxxx");
+    }
+
+
 
     /* CALENDAR */
 
